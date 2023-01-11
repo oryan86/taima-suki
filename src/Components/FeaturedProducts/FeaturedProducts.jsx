@@ -1,38 +1,41 @@
 import React from 'react'
+import Card from '../Card/Card'
+import hips1 from '../../asset/HIPS1-scaled.jpeg'
+import hips2 from '../../asset/HIPS1.jpeg'
 
 const FeaturedProducts = ({type}) => {
     const data = [
         {
             id: 1,
-            img: '../../asset/HIPS1-scaled.jpeg',
-            img2: '../../asset/HIPS1.jpeg',
+            img: hips1,
+            img2: hips2,
             title: 'H.I.P.S Hidden in plane site',
             isNew: true,
             oldPrice: 19,
             price: 12
         },
         {
-            id: 1,
-            img: '../../asset/HIPS1-scaled.jpeg',
-            img2: '../../asset/HIPS1.jpeg',
+            id: 2,
+            img: hips1,
+            img2: hips2,
             title: 'H.I.P.S Hidden in plane site',
             isNew: true,
             oldPrice: 19,
             price: 12
         },
         {
-            id: 1,
-            img: '../../asset/HIPS1-scaled.jpeg',
-            img2: '../../asset/HIPS1.jpeg',
+            id: 3,
+            img: hips1,
+            img2: hips2,
             title: 'H.I.P.S Hidden in plane site',
             isNew: true,
             oldPrice: 19,
             price: 12
         },
         {
-            id: 1,
-            img: '../../asset/HIPS1-scaled.jpeg',
-            img2: '../../asset/HIPS1.jpeg',
+            id: 4,
+            img: hips1,
+            img2: hips2,
             title: 'H.I.P.S Hidden in plane site',
             isNew: true,
             oldPrice: 19,
@@ -40,17 +43,18 @@ const FeaturedProducts = ({type}) => {
         }
     ]
 
-    console.log(data)
   return (
-    <div className=''>
+    <div className=' my-24 mx-48 '>
         {/* Top */}
-        <div>
-            <p>{type} products</p>
-            
+        <div className='flex items-center justify-between mb-12'>
+            <p className='font-bold text-lg capitalize'>{type} products</p>
         </div>
         {/* bottom */}
-        <div>
-
+        <div className='flex justify-center gap-12 flex-wrap'>
+            {data.map(item => {
+                return <Card item={item} key={item.id}/>
+            }
+            )}
         </div>
     </div>
   )
