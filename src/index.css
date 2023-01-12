@@ -13,5 +13,9 @@ html {
   background-image: url('./asset/smoker.jpeg');
 }
 
-
+@layer components {
+  .image:hover .secondImage {
+    z-index: 2;
+  }
+}
 

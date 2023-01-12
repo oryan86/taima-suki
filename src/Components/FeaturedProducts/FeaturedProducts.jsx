@@ -44,13 +44,13 @@ const FeaturedProducts = ({type}) => {
     ]
 
   return (
-    <div className=' my-24 mx-48 '>
+    <div id='products' className=' my-24 mx-48'>
         {/* Top */}
         <div className='flex items-center justify-between mb-12'>
             <p className='font-bold text-lg capitalize'>{type} products</p>
         </div>
         {/* bottom */}
-        <div className='flex justify-center gap-12 flex-wrap'>
+        <div className='flex justify-center gap-12 '>
             {data.map(item => {
                 return <Card item={item} key={item.id}/>
             }
